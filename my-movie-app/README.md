@@ -1,18 +1,84 @@
-# React + Vite
+Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Movie App built using React and Vite.
+It allows users to browse, search, and view movie details — including titles, descriptions, ratings, and more.
+This README provides setup instructions, project structure, environment configuration, and guidelines for production deployment.
 
-Currently, two official plugins are available:
+Features
+Display a list of movies
+View detailed movie information
+Search functionality
+Filter and sort (by genre, rating, year)
+Add/remove from favorites or watchlist
+Responsive design (mobile & desktop)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Optional: Pagination, lazy-loading, client-side routing
+ Tech Stack
+React (functional components + hooks)
+Vite (fast build tool)
+React Router (navigation)
+ Fetch API (data fetching)
+Tailwind CSS / CSS Modules / Styled Components (styling)
 
-## React Compiler
+Prerequisites
+Make sure you have installed:
+Node.js (v16 or higher)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-Note: This will impact Vite dev & build performances.
+ Installation & Local Setup
+Clone the repository
+git clone https://github.com/your-username/movie-app.git
+cd movie-app
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies
+
+npm install
+# or
+yarn install
+
+
+Set up environment variables
+
+
+Run the development server
+npm run dev
+
+
+Open your browser at http://localhost:5173
+
+
+After building, the /dist folder contains optimized static files you can deploy to any hosting provider (Vercel, Netlify, GitHub Pages
+ Environment Variables
+Create a .env file in your project root (Vite requires variables to start with VITE_):
+VITE_API_BASE_URL=https://api.themoviedb.org/3
+VITE_API_KEY=your_tmdb_api_key_here
+VITE_IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
+
+
+ Never commit .env files containing API keys to public repositories.
+Instead, include a .env.example file with placeholder values.
+
+ Project Structure 
+movie-app/
+├─ public/
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+│  │  ├─ MovieCard/
+│  │  ├─ SearchBar/
+│  ├─ pages/
+│  │  ├─ Home/
+│  │  ├─ MovieDetail/
+│  ├─ hooks/
+│  ├─ services/
+│  │  ├─ api.js
+│  ├─ context/
+│  ├─ routes/
+│  ├─ styles/
+│  ├─ App.jsx
+│  └─ main.jsx
+├─ .env.example
+├─ package.json
+├─ vite.config.js
+└─ README.md
