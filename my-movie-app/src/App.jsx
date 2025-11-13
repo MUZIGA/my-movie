@@ -4,7 +4,7 @@ import "./index.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import MovieDetails from "./Pages/MovieDetails";
-import Favorites from "./Pages/Favorites";
+import Favorites from "./hook/Favorites";
 import useFetchMovies from "./hook/useFetchMovies";
 
 function App() {
